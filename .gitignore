@@ -4,6 +4,7 @@ build/
 dist/
 *.docx
 !reference.docx
+!samples/sample.docx
 *.pdf
 *.aux
 *.log

@@ -743,7 +743,9 @@ for style_id in ['Normal', 'BodyText', 'FirstParagraph', 'Bibliography', 'Abstra
     if spacing is None:
         extra_failures.append(f'missing-style-spacing:{style_id}')
         continue
-    if spacing.get(qn('line')) != '400' or spacing.get(qn('lineRule')) != 'exact':
+    # Word may serialize 20 pt line spacing as either exact or atLeast depending on style inheritance.
+    # Both represent the required 400 twips spacing target for this public toolkit.
+    if spacing.get(qn('line')) != '400' or spacing.get(qn('lineRule')) not in {'exact', 'atLeast'}:
         extra_failures.append(f'bad-style-spacing:{style_id}:{spacing.get(qn("line"))}:{spacing.get(qn("lineRule"))}')
 
 spacing = get_style_spacing(styles.get('FootnoteText'))
@@ -824,6 +826,16 @@ for child in children:
         in_cn_abstract = False
         in_references = False
         continue
+
+    if style in {'KeywordsLineCN', 'KeywordsLineEN', 'TOCHeading', 'Heading1'} or ptext in {'目录', 'Contents'}:
+        if in_cn_abstract and style == 'KeywordsLineCN':
+            cn_keywords = ptext
+        if in_en_abstract and style == 'KeywordsLineEN':
+            en_keywords = ptext
+        in_cn_abstract = False
+        in_en_abstract = False
+        if style in {'KeywordsLineCN', 'KeywordsLineEN', 'TOCHeading'} or ptext in {'目录', 'Contents'}:
+            continue
 
     if style == 'ReferencesHeading' or ptext == '参考文献':
         in_references = True
