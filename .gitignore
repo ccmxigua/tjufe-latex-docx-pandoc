@@ -1,0 +1,31 @@
+# Build outputs
+out/
+build/
+dist/
+*.docx
+!reference.docx
+*.pdf
+*.aux
+*.log
+*.toc
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Private project material
+private/
+real-thesis/
+*.bib.backup

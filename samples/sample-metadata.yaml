@@ -1,0 +1,19 @@
+title: 天津财经大学博士毕业论文示例题目
+subtitle: LaTeX 到 DOCX 转换公开样例
+author: 张三
+student_id: 2026000000
+school: 某某学院
+major: 应用经济学
+supervisor: 李四 教授
+degree: 经济学博士
+submission_date: 2026年5月
+keywords:
+  zh: [数字经济, 产业升级, 实证研究]
+  en: [digital economy, industrial upgrading, empirical research]
+abstract:
+  zh: |
+    这是一个公开的占位摘要，用于演示论文模板的标题页、摘要、关键词、章节、图表、公式和参考文献转换效果。
+    本样例不包含任何真实论文正文、真实数据或个人信息。
+  en: |
+    This is a public placeholder abstract for demonstrating the conversion workflow from LaTeX to DOCX.
+    It contains no real dissertation text, private data, or unpublished research material.
