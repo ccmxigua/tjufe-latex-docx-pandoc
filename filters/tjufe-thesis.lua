@@ -159,18 +159,28 @@ end
 
 local function normalize_cn_keyword_content(text)
   local s = trim(text)
-  s = s:gsub('%s*[，,;；、]+%s*', '，')
-  s = s:gsub('，+', '，')
-  s = s:gsub('[，,;；、。.]+%s*$', '')
+  -- Lua patterns are byte-oriented for UTF-8. Do not put multibyte
+  -- Chinese punctuation inside bracket classes such as [，；、], because
+  -- that can split a UTF-8 character and create U+FFFD replacement glyphs
+  -- in Pandoc DOCX output. Keep Chinese separators intact and only
+  -- normalize ASCII separators that are safe byte characters.
+  s = s:gsub('%s*[,;]+%s*', '，')
+  s = s:gsub('，,', '，'):gsub(',，', '，')
+  s = s:gsub('，;', '，'):gsub(';，', '，')
+  s = s:gsub('[,;%.]+%s*$', '')
   return trim(s)
 end
 
 local function normalize_en_keyword_content(text)
   local s = trim(text)
-  s = s:gsub('[；，、]', ';')
+  -- Avoid UTF-8 punctuation in Lua bracket classes; replace multibyte
+  -- punctuation one literal at a time.
+  s = s:gsub('；', ';')
+  s = s:gsub('，', ';')
+  s = s:gsub('、', ';')
   s = s:gsub('%s*;%s*', '; ')
   s = s:gsub('%s+', ' ')
-  s = s:gsub('[;；，,。.]+%s*$', '')
+  s = s:gsub('[;,%.]+%s*$', '')
   return trim(s)
 end
 

@@ -1,19 +1,19 @@
-title: 天津财经大学博士毕业论文示例题目
-subtitle: LaTeX 到 DOCX 转换公开样例
-author: 张三
+title: 数字经济赋能区域产业升级的机制与效应研究：公开模板样例
+subtitle: 天津财经大学博士毕业论文 LaTeX 到 DOCX 转换演示
+author: 公开样例作者
 student_id: 2026000000
-school: 某某学院
+school: 公开样例学院
 major: 应用经济学
-supervisor: 李四 教授
+supervisor: 公开样例导师 教授
 degree: 经济学博士
 submission_date: 2026年5月
 keywords:
-  zh: [数字经济, 产业升级, 实证研究]
-  en: [digital economy, industrial upgrading, empirical research]
+  zh: 数字经济，产业升级，区域经济，公开样例，DOCX 转换
+  en: digital economy; industrial upgrading; regional economy; public sample; DOCX conversion
 abstract:
   zh: |
-    这是一个公开的占位摘要，用于演示论文模板的标题页、摘要、关键词、章节、图表、公式和参考文献转换效果。
-    本样例不包含任何真实论文正文、真实数据或个人信息。
+    数字经济正在改变企业生产、要素配置与区域产业分工方式。为了展示天津财经大学博士毕业论文模板在 Word 文档中的基本版式效果，本文构造了一个完全公开、完全虚构的研究样例。样例覆盖标题层级、摘要关键词、正文段落、脚注、数学公式、图表、交叉引用、稳健性检验、结论建议、参考文献和致谢等论文元素。
+    本样例不包含真实调研材料、真实数据库、真实回归结果或任何个人信息。所有变量名称、城市名称和数值均为占位内容，其目的只是帮助使用者检查 Pandoc、Lua filter 与 DOCX 后处理脚本的组合效果。
   en: |
-    This is a public placeholder abstract for demonstrating the conversion workflow from LaTeX to DOCX.
-    It contains no real dissertation text, private data, or unpublished research material.
+    The digital economy is reshaping production, factor allocation, and regional industrial specialization. This document provides a fully public and entirely fictional dissertation-style sample for demonstrating the LaTeX-to-DOCX conversion workflow.
+    This sample does not contain real survey materials, real databases, real empirical results, or personal information. All names, regions, variables, and numerical values are placeholders.
