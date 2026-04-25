@@ -1,12 +1,66 @@
-title: 数字经济赋能区域产业升级的机制与效应研究：公开模板样例
-subtitle: 天津财经大学博士毕业论文 LaTeX 到 DOCX 转换演示
+# Public placeholder metadata for the TJUFE LaTeX-to-DOCX sample.
+# This file intentionally contains no real student, advisor, project, or thesis information.
+
+# Legacy/basic fields used by Pandoc and compatibility paths.
+title: "数字经济赋能区域产业升级的机制与效应研究：公开模板样例"
+subtitle: "天津财经大学博士毕业论文 LaTeX 到 DOCX 转换演示"
 author: 公开样例作者
 student_id: 2026000000
 school: 公开样例学院
 major: 应用经济学
+advisor: 公开样例导师 教授
 supervisor: 公开样例导师 教授
 degree: 经济学博士
+degree_type: "博士毕业（学位）论文"
 submission_date: 2026年5月
+
+# Cover/title-page fields consumed by filters/tjufe-thesis.lua.
+insert_cover: true
+insert_title_page: true
+cover_degree_line: "天津财经大学博士毕业论文"
+cn_title: "数字经济赋能区域产业升级的机制与效应研究：公开模板样例"
+cn_subtitle: "天津财经大学博士毕业论文 LaTeX 到 DOCX 转换演示"
+en_title: "Mechanisms and Effects of the Digital Economy Empowering Regional Industrial Upgrading: A Public Template Sample"
+en_subtitle: "Demonstration of the LaTeX-to-DOCX Workflow for TJUFE Dissertations"
+cover_info_rows:
+  - label: 作者姓名
+    value: 公开样例作者
+  - label: 作者学号
+    value: 2026000000
+  - label: 学科专业
+    value: 应用经济学
+  - label: 指导教师
+    value: 公开样例导师 教授
+  - label: 培养学院
+    value: 公开样例学院
+cover_date: 2026年5月
+
+# Doctoral title-page fields; these trigger the formal doctoral title-page row layout.
+doctoral_subject: 应用经济学
+doctoral_direction: 数字经济与产业升级（公开占位）
+doctoral_student_name: 公开样例作者
+doctoral_apply_degree: 经济学博士
+doctoral_defense_date: 2026年5月
+doctoral_degree_date: 2026年6月
+
+title_page_info_rows:
+  - label: 论文作者
+    value: 公开样例作者
+  - label: 指导教师
+    value: 公开样例导师 教授
+  - label: 申请学位
+    value: 经济学博士
+  - label: 培养学院
+    value: 公开样例学院
+  - label: 学科专业
+    value: 应用经济学
+  - label: 研究方向
+    value: 数字经济与产业升级（公开占位）
+  - label: 答辩日期
+    value: 2026年5月
+  - label: 学位授予日期
+    value: 2026年6月
+
 keywords:
   zh: 数字经济，产业升级，区域经济，公开样例，DOCX 转换
   en: digital economy; industrial upgrading; regional economy; public sample; DOCX conversion
