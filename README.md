@@ -2,6 +2,8 @@
 
 一个面向“LaTeX 论文源文件 → Word DOCX”的 Pandoc 转换工具链示例。仓库包含转换脚本、Lua filter、DOCX 后处理脚本、公开占位样例与参考样式生成脚本。
 
+> 生成声明：本项目完全由 OpenClaw 以及 GPT-5.4 完成，包括工具链整理、公开样例生成、README 编写与发布流程。
+
 > 注意：本仓库是公开模板和工具链，不包含任何真实论文正文、真实数据、真实参考文献库、个人日志或私有信息。
 
 ## 功能概览
@@ -10,7 +12,7 @@
 - 通过 Lua filter 处理部分论文结构、标题、图表和交叉引用。
 - 通过 Python 后处理 DOCX 样式、页眉页脚、段落、图表题注和部分公式显示。
 - 可生成/使用 `reference.docx` 作为 Word 样式参考。
-- 提供最小公开样例：`samples/sample-thesis.tex` 与 `samples/sample-metadata.yaml`。
+- 提供最小公开样例：`samples/sample-thesis.tex`、`samples/sample-metadata.yaml` 与已生成的 `samples/sample.docx`。
 
 ## 目录结构
 
@@ -26,7 +28,10 @@
 ├── samples/
 │   ├── sample-thesis.tex
 │   ├── sample-metadata.yaml
+│   ├── sample.docx
 │   └── figures/example.png
+├── assets/
+│   └── sample.docx.png
 ├── reference.docx
 ├── .gitignore
 └── LICENSE
@@ -54,10 +59,18 @@ python3 -m pip install python-docx lxml
 
 ```bash
 chmod +x convert_tjufe.sh
-./convert_tjufe.sh samples/sample-thesis.tex samples/sample-metadata.yaml out/sample.docx
+./convert_tjufe.sh samples/sample-thesis.tex out/sample.docx samples/sample-metadata.yaml
 ```
 
 输出文件默认写入 `out/`。该目录已被 `.gitignore` 排除。
+
+仓库同时提供了一个已生成的公开示例：`samples/sample.docx`，便于直接查看转换效果。
+
+## DOCX 示例预览
+
+下图由 `samples/sample.docx` 渲染而来，仅使用公开占位内容，不包含真实论文正文或个人信息。
+
+![sample.docx preview](assets/sample.docx.png)
 
 ## 生成 reference.docx
 
